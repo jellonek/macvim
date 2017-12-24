@@ -4,7 +4,6 @@ set guioptions-=t
 set guioptions-=m
 " brak rullera
 set go-=r
-set guifont=Sauce\ Code\ Powerline\ Light:h17
 set rnu " relative numbers
 
 " nmap <F8> :TagbarToggle<CR>
@@ -14,5 +13,10 @@ set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·,eol:¬
 set pastetoggle=<F2>
 
 set fu
-set lines=38
-" set columns=142
+
+if has("mac") || has("macunix")
+    set guifont=Monaco\ for\ Powerline:h12
+elseif has("win32") || has("win64")
+    set guifont=Monaco\ for\ Powerline:h14:cANSI
+    set renderoptions=type:directx,renmode:5
+endif

@@ -103,7 +103,10 @@ endfun
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 call SetupVAM()
-VAMActivate jedi-vim vim-flake8 ctrlp vim-gitgutter commentary repeat surround unimpaired L9 AutoComplPop vim-snippets vim-airline fugitive
+VAMActivate jedi-vim vim-flake8 github:ctrlpvim/ctrlp.vim vim-gitgutter commentary repeat surround unimpaired L9 AutoComplPop vim-snippets vim-airline fugitive  github:Shougo/denite.nvim vimwiki github:ryanoasis/vim-devicons github:bagrat/vim-workspace
+
+noremap <Leader><Tab> :WSNext<CR>
+noremap <Leader><S-Tab> :WSPrev<CR>
 
 if version > 703
   VAMActivate vim-pandoc 
